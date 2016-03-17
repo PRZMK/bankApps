@@ -80,19 +80,17 @@ public class bankTest {
     public void withdrawTest() {
         Integer id = bank.createAccount("A", "B");
         bank.deposit(id, 65.7);
-
         bank.withdraw(id, 50.1);
         double balance = bank.getBalance(id);
-        assert balance == 15.6;
+        
+        assert balance == 15.6; 
     }
 
     @Test(expected = AccountIdException.class)
     public void withdrawFailTest1() {
         Integer id = bank.createAccount("A", "B");
         bank.deposit(id, 65.0);
-
         bank.withdraw(999, 50.0);
-
     }
 
     @Test(expected = InsufficientFundsException.class)
@@ -109,8 +107,6 @@ public class bankTest {
         bank.deposit(id, 65.0);
         bank.deposit(id2, 200.0);
         bank.transfer(id, id2, 10.0);
-
-        //double balance = bank.getBalance(id);
         assert bank.getBalance(id) == 55.0 && bank.getBalance(id2) == 210.0;
     }
 
