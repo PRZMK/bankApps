@@ -114,7 +114,7 @@ public class bankTest {
         Integer id2 = bank.createAccount("S", "C");
         bank.deposit(id, 65.0);
         bank.deposit(id2, 200.0);
-        bank.transfer(id, id2, 100.0);
+        bank.transfer(id, id2, 100.0);  //brak srodkow
     }
 
     @Test(expected = AccountIdException.class)
@@ -123,7 +123,7 @@ public class bankTest {
         Integer id2 = bank.createAccount("S", "C");
         bank.deposit(id, 65.0);
         bank.deposit(id2, 200.0);
-        bank.transfer(999, id2, 10.0);
+        bank.transfer(999, id2, 10.0);  //zle id konta
     }
 
     @Test(expected = AccountIdException.class)
@@ -132,7 +132,7 @@ public class bankTest {
         Integer id2 = bank.createAccount("S", "C");
         bank.deposit(id, 65.0);
         bank.deposit(id2, 200.0);
-        bank.transfer(id, 999, 10.0);
+        bank.transfer(id, 999, 10.0);   //zle id konta
     }
 
     @After
