@@ -1,0 +1,7 @@
+17-03-2016; 17:21:18:827 [main] DEBUG bankPackage.bankMain - --Application started
+17-03-2016; 17:21:26:848 [main] INFO  bankPackage.bankMain - Account created - id: 1
+17-03-2016; 17:21:30:867 [main] DEBUG bankPackage.bankMain - --Application stops
+17-03-2016; 17:23:54:249 [main] DEBUG bankPackage.bankMain - --Application started
+17-03-2016; 17:24:07:832 [main] INFO  bankPackage.bankMain - Account created - id: 1
+17-03-2016; 17:24:19:381 [main] INFO  bankPackage.bankMain - Deposit 3829.0 PLN on account id: 1
+17-03-2016; 17:24:28:821 [main] DEBUG bankPackage.bankMain - --Application stops
