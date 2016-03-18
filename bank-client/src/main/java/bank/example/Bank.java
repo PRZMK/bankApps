@@ -3,23 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bankPackage;
+package bank.example;
 
-import interfaces.bankInterface;
-import interfaces.bankInterface.*;
+import bank.core.impl.BankImpl;
+import bank.core.BankInterface.*;
 import java.io.IOException;
 import java.util.Scanner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import bank.core.BankInterface;
 
 /**
  *
  * @author Przemek DELL
  */
-public class bankMain {
+public class Bank {
     
-    private static final Logger logger = LoggerFactory.getLogger(bankMain.class);
-    private static bankInterface bank;
+    private static final Logger logger = LoggerFactory.getLogger(Bank.class);
+    private static BankInterface bank;
     
     /**
      * @param args the command line arguments
@@ -28,7 +29,7 @@ public class bankMain {
     public static void main(String[] args) throws IOException {
         Integer id, idSource, idDestination;
         double amount, balance;
-        bank = new bankImpl();
+        bank = new BankImpl();
         String name, address;
         logger.debug("--Application started");
         Scanner inputScanner = new Scanner(System.in);

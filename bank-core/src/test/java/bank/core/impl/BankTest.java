@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bankPackage;
+package bank.core.impl;
 
-import interfaces.bankInterface;
-import interfaces.bankInterface.*;
+import bank.core.impl.BankImpl;
+import bank.core.BankInterface.*;
 import java.util.Objects;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -14,16 +14,17 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import bank.core.BankInterface;
 
 /**
  *
  * @author Przemek DELL
  */
-public class bankTest {
+public class BankTest {
 
-    private bankInterface bank;
+    private BankInterface bank;
 
-    public bankTest() {
+    public BankTest() {
     }
 
     @BeforeClass
@@ -36,7 +37,7 @@ public class bankTest {
 
     @Before
     public void setUp() {
-        bank = new bankImpl();
+        bank = new BankImpl();
     }
 
     @Test

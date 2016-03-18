@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bankPackage;
-
+package bank.example.util;
 
 /**
  *
  * @author Przemek DELL
  */
-public class bankMain {
-
-    public static void main(String[] args) {
-
-    }
+public class ConnectionFactory {
+    
 }

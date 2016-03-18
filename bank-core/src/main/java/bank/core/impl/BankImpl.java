@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bankPackage;
+package bank.core.impl;
 
-import interfaces.bankInterface;
 import java.util.HashMap;
 import java.util.Map;
+import bank.core.BankInterface;
 
 /**
  *
  * @author Przemek DELL
  */
-public class bankImpl implements bankInterface {
+public class BankImpl implements BankInterface {
 
     private static double round(double value, int places) {
         if (places < 0) {
@@ -110,7 +110,7 @@ public class bankImpl implements bankInterface {
                 return;
             }
         }
-        throw new bankInterface.AccountIdException();
+        throw new BankInterface.AccountIdException();
     }
 
     @Override
@@ -120,7 +120,7 @@ public class bankImpl implements bankInterface {
                 return entry.getValue().getAmount();
             }
         }
-        throw new bankInterface.AccountIdException();
+        throw new BankInterface.AccountIdException();
     }
 
     @Override
@@ -132,11 +132,11 @@ public class bankImpl implements bankInterface {
                     entry.getValue().setAmount(entry.getValue().getAmount() - amount);
                     return;
                 } else {
-                    throw new bankInterface.InsufficientFundsException();
+                    throw new BankInterface.InsufficientFundsException();
                 }
             }
         }
-        throw new bankInterface.AccountIdException();
+        throw new BankInterface.AccountIdException();
     }
 
     @Override
@@ -148,10 +148,10 @@ public class bankImpl implements bankInterface {
                     deposit(idDestination, amount);
                     return;
                 } else {
-                    throw new bankInterface.InsufficientFundsException();
+                    throw new BankInterface.InsufficientFundsException();
                 }
             }
         }
-        throw new bankInterface.AccountIdException();
+        throw new BankInterface.AccountIdException();
     }
 }
