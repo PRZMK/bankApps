@@ -42,7 +42,7 @@ public interface Account {
      * @param costumer
      * @return
      */
-    List<Account> findAllAccount(Costumer costumer);
+    List<Account> findAllAccount(Customer costumer);
     
     /**
      *

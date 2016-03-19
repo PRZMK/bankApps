@@ -6,14 +6,13 @@
 package bank.core;
 
 import bank.core.Bank.*;
+import bank.core.actual.ActualBank;
 import java.util.Objects;
 import org.junit.After;
 import org.junit.AfterClass;
-
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import bank.core.actual.ActualBank;
 
 /**
  *

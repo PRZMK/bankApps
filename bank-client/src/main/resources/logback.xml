@@ -18,7 +18,7 @@
             <pattern>%date{dd MMM yyyy;HH:mm:ss.SSS} - [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
-    <logger name="bankPackage.bankMain" level="TRACE"/>             
+    <logger name="bank.example.AppBank" level="TRACE"/>             
     <root level="ERROR">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />

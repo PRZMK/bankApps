@@ -9,7 +9,7 @@ package bank.core;
  *
  * @author Przemek DELL
  */
-public interface Costumer {
+public interface Customer {
 
     /**
      *
@@ -49,6 +49,31 @@ public interface Costumer {
      * @return
      */
     Integer findByEmail(String email);
+
+    
+    public String getFirstName();
+
+    public String getLastName();
+
+    public String getPesel();
+
+    public String getEmail();
+
+    public String getAddress();
+
+    public Integer getId();
+    
+    public void setId(Integer id);
+    
+    public void setFirstName(String string);
+
+    public void setLastName(String string);
+
+    public void setPesel(String string);
+
+    public void setEmail(String string);
+
+    public void setAddress(String string);
     
     /**
      *

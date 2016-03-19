@@ -6,8 +6,8 @@
 package bank.core.actual;
 
 import bank.core.Account;
-import bank.core.Costumer;
 import java.util.List;
+import bank.core.Customer;
 
 /**
  *
@@ -31,7 +31,7 @@ public class ActualAccount implements Account {
     }
 
     @Override
-    public List<Account> findAllAccount(Costumer costumer) {
+    public List<Account> findAllAccount(Customer costumer) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
