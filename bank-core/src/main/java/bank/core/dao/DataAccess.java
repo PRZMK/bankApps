@@ -5,6 +5,7 @@
  */
 package bank.core.dao;
 
+import bank.core.Account;
 import java.util.List;
 import bank.core.Customer;
 
@@ -12,43 +13,55 @@ import bank.core.Customer;
  *
  * @author Przemek DELL
  */
-public interface CostumerDao {
+public interface DataAccess {
 
     /**
      *
      * @param costumer
      */
-    void save(Customer costumer);
+    void saveCustomer(Customer costumer);
 
     /**
      *
      * @param costumer
      */
-    void remove(Customer costumer);
+    void removeCustomer(Customer costumer);
 
     /**
      *
      * @param costumer
      */
-    void update(Customer costumer);
+    void updateCustomer(Customer costumer);
 
     /**
      *
      * @param id
      * @return
      */
-    Customer findById(Integer id);
+    Customer findCustomer(Integer id);
 
     /**
      *
      * @param pesel
      * @return
      */
-    Customer findByPesel(String pesel);
-    
+    Customer findCustomer(String pesel);
+
     /**
      *
      * @return
      */
-    List<Customer> findAll();
+    List<Customer> findAllCustomers();
+
+    void saveAccount(Account account);
+
+    void removeAccount(Account account);
+
+    void updateAccount(Account account);
+
+    Account findAccount(Integer id);
+
+    List<Account> findAllCustomerAccounts(Customer customer);
+
+    List<Account> findAllAccounts();
 }

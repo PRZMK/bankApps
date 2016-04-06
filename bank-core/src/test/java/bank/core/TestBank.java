@@ -5,8 +5,8 @@
  */
 package bank.core;
 
-import bank.core.Bank.*;
-import bank.core.actual.ActualBank;
+import bank.core.Bank2.*;
+import bank.core.actual.ActualBank2;
 import java.util.Objects;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -20,7 +20,7 @@ import org.junit.Test;
  */
 public class TestBank {
 
-    private Bank bank;
+    private Bank2 bank;
 
     public TestBank() {
     }
@@ -35,7 +35,7 @@ public class TestBank {
 
     @Before
     public void setUp() {
-        bank = new ActualBank();
+        bank = new ActualBank2();
     }
 
     @Test

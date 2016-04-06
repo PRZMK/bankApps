@@ -5,10 +5,14 @@
  */
 package bank.core.dao;
 
+import bank.core.Account;
+import bank.core.Customer;
+
 /**
  *
  * @author Przemek DELL
  */
 public interface AccountDao {
-    
+    void saveAccountToCustomer(Account account, Customer customer);
+   
 }

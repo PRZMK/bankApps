@@ -5,6 +5,8 @@
  */
 package bank.core.dao.actual;
 
+import bank.core.Account;
+import bank.core.Customer;
 import bank.core.dao.AccountDao;
 
 /**
@@ -12,5 +14,10 @@ import bank.core.dao.AccountDao;
  * @author Przemek DELL
  */
 public class ActualAccountDao implements AccountDao{
+
+    @Override
+    public void saveAccountToCustomer(Account account, Customer customer) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

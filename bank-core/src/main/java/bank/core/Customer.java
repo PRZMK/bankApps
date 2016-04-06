@@ -11,45 +11,17 @@ package bank.core;
  */
 public interface Customer {
 
-    /**
-     *
-     * @param firstName
-     * @param lastName
-     * @param pesel
-     * @param address
-     * @param email
-     * @return
-     */
-    Integer create(String firstName, String lastName, String pesel, String address, String email);
+    void save();
 
-    /**
-     *
-     * @param id
-     */
-    void remove(Integer id);
+    void loadCustomerDataWithPesel(String pesel);
 
-    /**
-     *
-     * @param pesel
-     * @return
-     */
-    Integer findByPesel(String pesel);
+    void loadCustomerDataWithId (Integer id);
 
-    /**
-     *
-     * @param firstName
-     * @param lastname
-     * @return
-     */
-    Integer find(String firstName, String lastname);
-
-    /**
-     *
-     * @param email
-     * @return
-     */
-    Integer findByEmail(String email);
-
+    void updateInDatabase();
+    
+    void remove();
+    
+    void addAccount(Account account);
     
     public String getFirstName();
 
@@ -74,10 +46,7 @@ public interface Customer {
     public void setEmail(String string);
 
     public void setAddress(String string);
-    
-    /**
-     *
-     */
+
     class CostumerIdException extends RuntimeException {
     };
     

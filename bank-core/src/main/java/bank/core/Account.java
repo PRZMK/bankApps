@@ -13,73 +13,45 @@ import java.util.List;
  */
 public interface Account {
 
-    /**
-     *
-     * @param costumerId
-     * @param notes informacje dodatkowe o koncie
-     * @param balance srodki na koncie
-     * @return id utworzonego lub istniejacego konta.
-     */
-    Integer createAccount(Integer costumerId, String notes, double balance);
-    
-    /**
-     *
-     * @param costumerId
-     * @param notes
-     * @return
-     */
-    Integer findAccount(Integer costumerId, String notes);
-    
-    /**
-     *
-     * @param costumerId
-     * @return
-     */
-    List<Account> findAllAccount(Integer costumerId);
-    
-    /**
-     *
-     * @param costumer
-     * @return
-     */
-    List<Account> findAllAccount(Customer costumer);
-    
-    /**
-     *
-     * @param id
-     * @param amount
-     */
-    void deposit(Integer id, double amount);
+    void save();
 
-    /**
-     *
-     * @param id
-     * @return
-     */
-    double getBalance(Integer id);
+    void loadAccountDataWithId(Integer id);
 
-    /**
-     *
-     * @param id
-     * @param amount
-     */
-    void withdraw(Integer id, double amount);
-
-    /**
-     *
-     * @param idSource
-     * @param idDestination
-     * @param amount
-     */
-    void transfer(Integer idSource, Integer idDestination, double amount);
+    void loadAccountDataWithNotes(String notes);
     
+    void remove();
+    
+    void updateInDatabase();
+
+    void deposit(double amount);
+
+    void withdraw(double amount);
+
+    void transferMoneyToAccount(double amount, Account destination);
+
+    public String getNotes();
+
+    public void setId(Integer id);
+
+    public Integer getId();
+
+    public double getBalance();
+
+    public int getCustomerId();
+
+    public void setNotes(String string);
+
+    public void setBalance(double aDouble);
+
+    public void setCustomerId(int aInt);
+
     /**
      * Gdy gdy srodki na koncie nie sa wystarczajace do wykonania operacji
      *
      */
     class InsufficientFundsException extends RuntimeException {
     };
-    
+
     /**
      * Gdy id konta jest nieprawidlowe
      *
