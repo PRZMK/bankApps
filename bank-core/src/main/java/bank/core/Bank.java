@@ -12,8 +12,14 @@ import java.util.List;
  *
  * @author Przemek DELL
  */
-public interface Bank {   
-    
-    
-    
+public interface Bank {
+
+    public void loadAllCustomers();
+
+    public void loadAllAccounts();
+
+    public List<Account> getAllAccounts();
+
+    public List<Customer> getAllCustomers();
+
 }

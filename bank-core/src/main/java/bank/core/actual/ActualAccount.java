@@ -7,11 +7,9 @@ package bank.core.actual;
 
 import bank.core.Account;
 import java.util.List;
-import bank.core.Customer;
 import bank.core.dao.DataAccess;
 import bank.core.dao.actual.ActualDataAccess;
 import java.util.ArrayList;
-import bank.core.Bank2;
 
 /**
  *
@@ -33,7 +31,6 @@ public class ActualAccount implements Account {
     }
 
     public ActualAccount() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private void clone(Account account) {
@@ -96,6 +93,9 @@ public class ActualAccount implements Account {
     @Override
     public void loadAccountDataWithId(Integer id) {
         clone(database.findAccount(id));
+        if (this.id == null) {
+            throw new Account.AccountIdException();
+        }
     }
 
     @Override
@@ -117,9 +117,10 @@ public class ActualAccount implements Account {
     public void withdraw(double amount) {
         if (this.balance > amount) {
             this.balance = this.balance - amount;
+            round(this.balance,2);
             return;
-        }else{
-            throw new Bank2.InsufficientFundsException();
+        } else {
+            throw new Account.InsufficientFundsException();
         }
     }
 
@@ -129,9 +130,18 @@ public class ActualAccount implements Account {
         destination.deposit(amount);
     }
 
+    private static double round(double value, int places) {
+        if (places < 0) {
+            throw new IllegalArgumentException();
+        }
+        long factor = (long) Math.pow(10, places);
+        value = value * factor;
+        long tmp = Math.round(value);
+        return (double) tmp / factor;
+    }
+
     @Override
     public void loadAccountDataWithNotes(String notes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 }

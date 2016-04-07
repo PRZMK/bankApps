@@ -8,6 +8,7 @@ package bank.core.actual;
 import bank.core.Account;
 import bank.core.dao.actual.ActualDataAccess;
 import bank.core.Customer;
+import bank.core.Customer.CostumerIdException;
 import java.util.Objects;
 import bank.core.dao.DataAccess;
 import java.util.ArrayList;
@@ -19,9 +20,9 @@ import java.util.List;
  */
 public class ActualCustomer implements Customer {
 
-    private Integer id;
-    private String firstName;
-    private String lastName;
+    private Integer id = null;
+    private String firstName= null;
+    private String lastName=null;
     private String address;
     private String pesel;
     private String email;
@@ -147,11 +148,17 @@ public class ActualCustomer implements Customer {
     @Override
     public void loadCustomerDataWithPesel(String pesel) {
         this.copy(database.findCustomer(pesel));
+        if (this.id == null){
+            throw new Customer.CostumerIdException();
+        }
     }
 
     @Override
     public void loadCustomerDataWithId(Integer id) {
         this.copy(database.findCustomer(id));
+        if (this.id == null){
+            throw new Customer.CostumerIdException();
+        }
     }
 
     @Override
@@ -164,4 +171,8 @@ public class ActualCustomer implements Customer {
         setAccounts(database.findAllCustomerAccounts(this));
     }
 
+    @Override
+    public boolean exist() {
+        return id != null;  
+    }
 }

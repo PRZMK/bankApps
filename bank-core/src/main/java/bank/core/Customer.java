@@ -5,24 +5,28 @@
  */
 package bank.core;
 
+import java.util.List;
+
 /**
  *
  * @author Przemek DELL
  */
 public interface Customer {
 
+    boolean exist();
+
     void save();
 
     void loadCustomerDataWithPesel(String pesel);
 
-    void loadCustomerDataWithId (Integer id);
+    void loadCustomerDataWithId(Integer id);
 
     void updateInDatabase();
-    
+
     void remove();
-    
-    void addAccount(Account account);
-    
+
+    public void loadAllAccounts();
+
     public String getFirstName();
 
     public String getLastName();
@@ -34,9 +38,11 @@ public interface Customer {
     public String getAddress();
 
     public Integer getId();
-    
+
+    public List<Account> getAccounts();
+
     public void setId(Integer id);
-    
+
     public void setFirstName(String string);
 
     public void setLastName(String string);
@@ -49,6 +55,4 @@ public interface Customer {
 
     class CostumerIdException extends RuntimeException {
     };
-    
-    
 }

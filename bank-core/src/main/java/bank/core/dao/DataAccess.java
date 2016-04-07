@@ -15,42 +15,16 @@ import bank.core.Customer;
  */
 public interface DataAccess {
 
-    /**
-     *
-     * @param costumer
-     */
     void saveCustomer(Customer costumer);
 
-    /**
-     *
-     * @param costumer
-     */
     void removeCustomer(Customer costumer);
 
-    /**
-     *
-     * @param costumer
-     */
     void updateCustomer(Customer costumer);
 
-    /**
-     *
-     * @param id
-     * @return
-     */
     Customer findCustomer(Integer id);
 
-    /**
-     *
-     * @param pesel
-     * @return
-     */
     Customer findCustomer(String pesel);
 
-    /**
-     *
-     * @return
-     */
     List<Customer> findAllCustomers();
 
     void saveAccount(Account account);

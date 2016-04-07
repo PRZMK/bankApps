@@ -142,7 +142,7 @@ public class ActualDataAccess implements DataAccess {
     @Override
     public Customer findCustomer(Integer id) {
         final String SQL = "select * from zawadzki.customer where id = ?";
-        Customer result = null;
+        Customer result = new ActualCustomer();
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -152,7 +152,6 @@ public class ActualDataAccess implements DataAccess {
             statement.setInt(1, id);
             rs = statement.executeQuery();
             if (rs.next()) {
-                result = new ActualCustomer();
                 result.setId(rs.getInt("id"));
                 result.setFirstName(rs.getString("firstName"));
                 result.setLastName(rs.getString("lastName"));
@@ -183,7 +182,7 @@ public class ActualDataAccess implements DataAccess {
     @Override
     public Customer findCustomer(String pesel) {
         final String SQL = "select * from zawadzki.customer where pesel = ?";
-        Customer result = null;
+        Customer result = new ActualCustomer();
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -193,7 +192,6 @@ public class ActualDataAccess implements DataAccess {
             statement.setString(1, pesel);
             rs = statement.executeQuery();
             if (rs.next()) {
-                result = new ActualCustomer();
                 result.setId(rs.getInt("id"));
                 result.setFirstName(rs.getString("firstName"));
                 result.setLastName(rs.getString("lastName"));
@@ -225,6 +223,7 @@ public class ActualDataAccess implements DataAccess {
     public List<Customer> findAllCustomers() {
         final String SQL = "select * from zawadzki.customer";
         List<Customer> resultList = new ArrayList<>();
+        Customer customer;
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -233,13 +232,14 @@ public class ActualDataAccess implements DataAccess {
             statement = conn.prepareStatement(SQL);
             rs = statement.executeQuery();
             while (rs.next()) {
-                resultList.add(new ActualCustomer());
-                resultList.get(resultList.size()).setId(rs.getInt("id"));
-                resultList.get(resultList.size()).setFirstName(rs.getString("firstName"));
-                resultList.get(resultList.size()).setLastName(rs.getString("lastName"));
-                resultList.get(resultList.size()).setAddress(rs.getString("address"));
-                resultList.get(resultList.size()).setPesel(rs.getString("pesel"));
-                resultList.get(resultList.size()).setEmail(rs.getString("email"));
+                customer = new ActualCustomer();
+                customer.setId(rs.getInt("id"));
+                customer.setFirstName(rs.getString("firstName"));
+                customer.setLastName(rs.getString("lastName"));
+                customer.setAddress(rs.getString("address"));
+                customer.setPesel(rs.getString("pesel"));
+                customer.setEmail(rs.getString("email"));
+                resultList.add(customer);
             }
         } catch (SQLException ex) {
             throw new DataAccessException(ex);
@@ -372,8 +372,8 @@ public class ActualDataAccess implements DataAccess {
 
     @Override
     public Account findAccount(Integer id) {
-        final String SQL = "select * from zawadzki.customer where id = ?";
-        Account result = null;
+        final String SQL = "select * from zawadzki.account where id = ?";
+        Account result = new ActualAccount();
         Connection conn = null;
         PreparedStatement statement = null;
         ResultSet rs = null;
@@ -383,7 +383,7 @@ public class ActualDataAccess implements DataAccess {
             statement.setInt(1, id);
             rs = statement.executeQuery();
             if (rs.next()) {
-                result = new ActualAccount();
+
                 result.setId(rs.getInt("id"));
                 result.setNotes(rs.getString("notes"));
                 result.setBalance(rs.getDouble("balance"));
@@ -413,6 +413,7 @@ public class ActualDataAccess implements DataAccess {
     public List<Account> findAllCustomerAccounts(Customer customer) {
         final String SQL = "select * from zawadzki.account where id_customer = ?";
         List<Account> resultList = new ArrayList<>();
+        Account account;
         Connection conn = null;
         PreparedStatement statement = null;
 
@@ -423,11 +424,12 @@ public class ActualDataAccess implements DataAccess {
             statement.setInt(1, customer.getId());
             rs = statement.executeQuery();
             while (rs.next()) {
-                resultList.add(new ActualAccount());
-                resultList.get(resultList.size()).setId(rs.getInt("id"));
-                resultList.get(resultList.size()).setNotes(rs.getString("notes"));
-                resultList.get(resultList.size()).setBalance(rs.getDouble("balance"));
-                resultList.get(resultList.size()).setCustomerId(rs.getInt("id_customer"));
+                account = new ActualAccount();
+                account.setId(rs.getInt("id"));
+                account.setNotes(rs.getString("notes"));
+                account.setBalance(rs.getDouble("balance"));
+                account.setCustomerId(rs.getInt("id_customer"));
+                resultList.add(account);
             }
         } catch (SQLException ex) {
             throw new DataAccessException(ex);
@@ -453,6 +455,7 @@ public class ActualDataAccess implements DataAccess {
     public List<Account> findAllAccounts() {
         final String SQL = "select * from zawadzki.account";
         List<Account> resultList = new ArrayList<>();
+        Account account;
         Connection conn = null;
         PreparedStatement statement = null;
 
@@ -462,11 +465,12 @@ public class ActualDataAccess implements DataAccess {
             statement = conn.prepareStatement(SQL);
             rs = statement.executeQuery();
             while (rs.next()) {
-                resultList.add(new ActualAccount());
-                resultList.get(resultList.size()).setId(rs.getInt("id"));
-                resultList.get(resultList.size()).setNotes(rs.getString("notes"));
-                resultList.get(resultList.size()).setBalance(rs.getDouble("balance"));
-                resultList.get(resultList.size()).setCustomerId(rs.getInt("id_customer"));
+                account = new ActualAccount();
+                account.setId(rs.getInt("id"));
+                account.setNotes(rs.getString("notes"));
+                account.setBalance(rs.getDouble("balance"));
+                account.setCustomerId(rs.getInt("id_customer"));
+                resultList.add(account);
             }
         } catch (SQLException ex) {
             throw new DataAccessException(ex);

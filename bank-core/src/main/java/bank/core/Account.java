@@ -18,9 +18,9 @@ public interface Account {
     void loadAccountDataWithId(Integer id);
 
     void loadAccountDataWithNotes(String notes);
-    
+
     void remove();
-    
+
     void updateInDatabase();
 
     void deposit(double amount);
