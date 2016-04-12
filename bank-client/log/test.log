@@ -1,0 +1,133 @@
+17-03-2016; 17:21:18:827 [main] DEBUG bankPackage.bankMain - --Application started
+17-03-2016; 17:21:26:848 [main] INFO  bankPackage.bankMain - Account created - id: 1
+17-03-2016; 17:21:30:867 [main] DEBUG bankPackage.bankMain - --Application stops
+17-03-2016; 17:23:54:249 [main] DEBUG bankPackage.bankMain - --Application started
+17-03-2016; 17:24:07:832 [main] INFO  bankPackage.bankMain - Account created - id: 1
+17-03-2016; 17:24:19:381 [main] INFO  bankPackage.bankMain - Deposit 3829.0 PLN on account id: 1
+17-03-2016; 17:24:28:821 [main] DEBUG bankPackage.bankMain - --Application stops
+17-03-2016; 21:33:10:700 [main] DEBUG bankPackage.bankMain - --Application started
+17-03-2016; 21:33:21:618 [main] INFO  bankPackage.bankMain - Account created - id: 1
+17-03-2016; 21:33:23:528 [main] DEBUG bankPackage.bankMain - --Application stops
+19-03-2016; 16:35:05:767 [main] DEBUG bank.example.AppBank - --Application started
+19-03-2016; 16:36:15:633 [main] INFO  bank.example.AppBank - Account created - id: 1
+19-03-2016; 16:36:19:906 [main] DEBUG bank.example.AppBank - --Application stops
+19-03-2016; 16:40:06:201 [main] DEBUG bank.example.AppBank - --Application started
+19-03-2016; 16:40:43:670 [main] INFO  bank.example.AppBank - Account created - id: 3
+19-03-2016; 16:40:48:202 [main] DEBUG bank.example.AppBank - --Application stops
+19-03-2016; 16:47:35:361 [main] DEBUG bank.example.AppBank - --Application started
+19-03-2016; 17:16:26:045 [main] DEBUG bank.example.AppBank - --Application started
+19-03-2016; 17:16:54:866 [main] INFO  bank.example.AppBank - Account exist - id: null
+19-03-2016; 17:16:54:867 [main] ERROR bank.example.AppBank - bank.core.exception.DataAccessException: org.apache.derby.shared.common.error.DerbySQLIntegrityConstraintViolationException: Instrukcja zosta³a przerwana, poniewa¿ mog³a spowodowaæ powstanie duplikatu wartoœci klucza w regule ograniczaj¹cej klucz unikalny lub podstawowy albo w unikalnym indeksie identyfikowanym przez obiekt 'SQL160319130933321' zdefiniowany dla 'CUSTOMER'.
+19-03-2016; 17:28:40:122 [main] DEBUG bank.example.AppBank - --Application started
+19-03-2016; 17:29:02:879 [main] INFO  bank.example.AppBank - Account exist - id: 1
+19-03-2016; 17:29:02:879 [main] ERROR bank.example.AppBank - bank.core.exception.DataAccessException: org.apache.derby.shared.common.error.DerbySQLIntegrityConstraintViolationException: Instrukcja zosta³a przerwana, poniewa¿ mog³a spowodowaæ powstanie duplikatu wartoœci klucza w regule ograniczaj¹cej klucz unikalny lub podstawowy albo w unikalnym indeksie identyfikowanym przez obiekt 'SQL160319130933321' zdefiniowany dla 'CUSTOMER'.
+19-03-2016; 17:29:27:556 [main] DEBUG bank.example.AppBank - --Application stops
+19-03-2016; 17:29:31:269 [main] DEBUG bank.example.AppBank - --Application stops
+05-04-2016; 11:58:29:738 [main] DEBUG bank.example.AppBank - --Application started
+05-04-2016; 11:59:38:614 [main] INFO  bank.example.AppBank - Account exist - id: null
+06-04-2016; 19:50:50:815 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 19:52:23:972 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 19:54:47:062 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 19:57:18:572 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:01:02:887 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:01:02:929 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:04:33:069 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:07:14:427 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:09:55:645 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:11:56:319 [main] DEBUG bank.example.AppBank - --Application started
+06-04-2016; 20:13:54:381 [main] DEBUG bank.example.AppBank - --Application stops
+07-04-2016; 14:51:20:484 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 14:52:49:199 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 14:53:35:580 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 16:58:34:476 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:25:22:948 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:25:25:488 [main] DEBUG bank.example.AppBank - --Application stops
+07-04-2016; 20:26:57:618 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:27:44:089 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:28:25:302 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:30:02:257 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:31:26:448 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:31:36:162 [main] ERROR bank.example.AppBank - bank.core.exception.DataAccessException: java.sql.SQLNonTransientConnectionException: java.net.ConnectException: B³¹d podczas ³¹czenia z serwerem localhost na porcie 1 527 z komunikatem Connection refused: connect.
+07-04-2016; 20:33:23:545 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:33:32:476 [main] ERROR bank.example.AppBank - bank.core.exception.DataAccessException: java.sql.SQLNonTransientConnectionException: java.net.ConnectException: B³¹d podczas ³¹czenia z serwerem localhost na porcie 1 527 z komunikatem Connection refused: connect.
+07-04-2016; 20:34:06:298 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:34:15:435 [main] ERROR bank.example.AppBank - bank.core.exception.DataAccessException: java.sql.SQLNonTransientConnectionException: java.net.ConnectException: B³¹d podczas ³¹czenia z serwerem localhost na porcie 1 527 z komunikatem Connection refused: connect.
+07-04-2016; 20:34:55:562 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:37:37:713 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:38:43:425 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:44:49:677 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:49:01:090 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:55:27:957 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:56:02:108 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:58:50:339 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:59:15:914 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 20:59:54:086 [main] INFO  bank.example.AppBank - Account created - id: 7
+07-04-2016; 21:00:36:674 [main] INFO  bank.example.AppBank - Account with pesel 95120500 exist - id: 2
+07-04-2016; 21:01:05:836 [main] INFO  bank.example.AppBank - Account with pesel Boki exist - id: 7
+07-04-2016; 21:05:57:140 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 21:06:32:258 [main] INFO  bank.example.AppBank - Account created - id: 8
+07-04-2016; 21:09:46:362 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 21:10:27:827 [main] INFO  bank.example.AppBank - Account created - id: 9
+07-04-2016; 21:12:07:586 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 21:12:49:613 [main] INFO  bank.example.AppBank - Account created - id: 10
+07-04-2016; 22:46:35:427 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 22:47:16:248 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 22:50:02:031 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 22:50:08:802 [main] INFO  bank.example.AppBank - Klient o id: 2 nie posiada kont
+07-04-2016; 22:59:30:840 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 22:59:36:783 [main] INFO  bank.example.AppBank - Klient o id: 2 nie posiada kont
+07-04-2016; 23:21:06:259 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 23:42:20:778 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 23:46:58:280 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 23:49:11:682 [main] DEBUG bank.example.AppBank - --Application started
+07-04-2016; 23:49:43:113 [main] INFO  bank.example.AppBank - Customer created - id: 11
+07-04-2016; 23:49:51:766 [main] ERROR bank.example.AppBank - Customer not exist bank.core.Customer$CostumerIdException
+07-04-2016; 23:50:12:765 [main] INFO  bank.example.AppBank - Customer with id: 11 don't have any accounts
+07-04-2016; 23:50:35:374 [main] WARN  bank.example.AppBank - Wrong case
+07-04-2016; 23:50:37:403 [main] DEBUG bank.example.AppBank - --Application stops
+07-04-2016; 23:50:41:219 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:04:41:245 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:06:08:573 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:06:48:597 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:08:53:710 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:10:28:234 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:10:38:623 [main] ERROR bank.example.AppBank - Customer not exist bank.core.Customer$CostumerIdException
+08-04-2016; 00:11:28:750 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:11:38:986 [main] ERROR bank.example.AppBank - Customer not exist bank.core.Customer$CostumerIdException
+08-04-2016; 00:12:00:510 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:12:03:720 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:16:10:357 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:16:27:314 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:16:28:937 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:22:08:299 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:22:17:110 [main] ERROR bank.example.AppBank - Customer not exist bank.core.Customer$CostumerIdException
+08-04-2016; 00:22:42:818 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:23:00:029 [main] ERROR bank.example.AppBank - Account not exist bank.core.Account$AccountIdException
+08-04-2016; 00:23:12:044 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:23:12:354 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:24:13:669 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:24:23:195 [main] ERROR bank.example.AppBank - Account not exist bank.core.Account$AccountIdException
+08-04-2016; 00:26:29:367 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:27:09:644 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:28:23:468 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:30:00:602 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:32:28:526 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:32:58:445 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:33:59:502 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:35:08:431 [main] ERROR bank.example.AppBank - Account not exist bank.core.Account$AccountIdException
+08-04-2016; 00:39:46:560 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:39:55:329 [main] ERROR bank.example.AppBank - Customer not exist bank.core.Customer$CostumerIdException
+08-04-2016; 00:40:57:772 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 00:41:42:373 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 00:41:43:374 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 01:06:03:319 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 01:07:10:192 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 01:08:02:848 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 01:12:25:996 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 01:12:51:608 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 01:13:30:012 [main] INFO  bank.example.AppBank - Customer created - id: 12
+08-04-2016; 01:13:49:618 [main] DEBUG bank.example.AppBank - --Application stops
+08-04-2016; 01:15:28:814 [main] ERROR bank.example.AppBank - Invalid input java.util.InputMismatchException
+08-04-2016; 01:18:31:976 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 01:27:53:691 [main] DEBUG bank.example.AppBank - --Application started
+08-04-2016; 01:28:52:839 [main] DEBUG bank.example.AppBank - --Application started
