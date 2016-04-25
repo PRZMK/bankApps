@@ -7,6 +7,7 @@ package bank.core;
 
 import bank.core.actual.ActualAccount;
 import bank.core.actual.ActualBank;
+import bank.core.actual.ActualCustomer;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -41,6 +42,17 @@ public class TestBankApp {
         
     }
     
+    @Test
+    public void createCustomer(){
+        Customer customer = new ActualCustomer();
+        customer.setFirstName("Name");
+        customer.setLastName("Lastname");
+        customer.setPesel("9445665");
+        customer.setAddress("address");
+        customer.setEmail("mail@gmail.com");
+        customer.save();
+        assert customer.exist();
+    }
     
     
     @After

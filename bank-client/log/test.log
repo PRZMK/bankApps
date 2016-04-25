@@ -131,3 +131,5 @@
 08-04-2016; 01:18:31:976 [main] DEBUG bank.example.AppBank - --Application started
 08-04-2016; 01:27:53:691 [main] DEBUG bank.example.AppBank - --Application started
 08-04-2016; 01:28:52:839 [main] DEBUG bank.example.AppBank - --Application started
+26-04-2016; 00:56:22:303 [main] DEBUG bank.example.AppBank - --Application started
+26-04-2016; 00:56:46:997 [main] INFO  bank.example.AppBank - Customer created - id: 13
