@@ -1,7 +1,7 @@
 # bankApp
 
 Maven simple console bank application for my studies with support JDBC database on the Glasfish server. 
-I implements logback, slf4j and jUnit libraries. 
+I implemented logback, slf4j and jUnit libraries. 
 
 !jUnit tests in progress
 
