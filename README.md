@@ -6,6 +6,7 @@ To create database:
 + Database name: bankDB
 + User: Zawadzki
 + Password: password;
+
 (You can create your own database but then you have to change ConnectionFactory class)
 
 script to create tables:
