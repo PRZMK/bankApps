@@ -6,6 +6,7 @@
 package bank.core;
 
 import bank.core.actual.ActualAccount;
+import bank.core.actual.ActualBank;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,11 +20,14 @@ import static org.junit.Assert.*;
  */
 public class TestBankApp {
     
+    private static Bank bank;
+    
     public TestBankApp() {
     }
     
     @BeforeClass
     public static void setUpClass() {
+        bank = new ActualBank();
     }
     
     @AfterClass
@@ -32,11 +36,8 @@ public class TestBankApp {
     
     @Before
     public void setUp() {
-    }
-    
-    @Test
-    public void transfer(){
-       
+        bank.loadAllCustomers();
+        bank.loadAllAccounts();
         
     }
     
